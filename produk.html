@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopin Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #ffd6e7; /* pink baby */
+        }
+        header {
+            background-color: #ff9ecb;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .cart {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-weight: bold;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .price {
+            color: #e84393;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ff6fa5;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff4d94;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ff9ecb;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Wallet Store 💖</h1>
+    <p>Pilih dompet favorit kamu!</p>
+</header>
+
+<div class="cart">
+    🛒 Keranjang: <span id="cart-count">0</span>
+</div>
+
+<div class="container">
+
+    <!-- Produk 1 -->
+    <div class="card">
+        <img src="wallet1.jpeg" width="200">
+        <div class="card-body">
+            <h3>Brown sweet Wallet</h3>
+            <p class="price">Rp95.000</p>
+            <button class="btn" onclick="addToCart()">Tambah</button>
+        </div>
+    </div>
+
+    <!-- Produk 2 -->
+    <div class="card">
+        <img src="wallet2.jpeg" width="200">
+        <div class="card-body">
+            <h3>crocodile embossed Wallet</h3>
+            <p class="price">Rp120.000</p>
+            <button class="btn" onclick="addToCart()">Tambah</button>
+        </div>
+    </div>
+
+    <!-- Produk 3 -->
+    <div class="card">
+        <img src="wallet3.jpeg" width="200">
+        <div class="card-body">
+            <h3>White Soft Wallet</h3>
+            <p class="price">Rp65.000</p>
+            <button class="btn" onclick="addToCart()">Tambah</button>
+        </div>
+    </div>
+
+    <!-- Produk 4 -->
+    <div class="card">
+        <img src="wallet4.jpeg" width="200">
+        <div class="card-body">
+            <h3>Silver Slim Wallet</h3>
+            <p class="price">Rp80.000</p>
+            <button class="btn" onclick="addToCart()">Tambah</button>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>📞 Hubungi Kami: 0813-2407-9491</p>
+    <p>© 2026 Loopin Store</p>
+</footer>
+
+<script>
+    let count = 0;
+    function addToCart() {
+        count++;
+        document.getElementById("cart-count").innerText = count;
+    }
+</script>
+
+</body>
+</html>
